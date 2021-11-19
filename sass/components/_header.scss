@@ -1,0 +1,119 @@
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  max-width: 1600px;
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-logo {
+  font-family: $Raleway, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31px;
+  color: $color-blue;
+}
+
+.header-logo--black {
+  color: $color-black;
+}
+
+.header-logo--white {
+  color: $color-white;
+}
+
+.navigation {
+  margin-left: 93px;
+}
+
+.navigation-menu {
+  display: flex;
+}
+
+.navigation-menu__item {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: $color-black;
+  margin-right: 50px;
+  font-family: $Roboto, sans-serif;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    color: $color-blue;
+  }
+}
+
+.navigation-menu__item--last {
+  margin-right: 0;
+}
+
+.navigation-menu__item--active {
+  color: $color-blue;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $color-blue;
+    border-radius: 2px;
+    margin-bottom: -1px;
+  }
+}
+
+.header-address {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-address__item--first {
+  margin-right: 50px;
+}
+
+.header-address__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: $color-gray;
+  display: flex;
+  align-items: center;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    color: $color-blue;
+  }
+}
+
+.address-icon__mail {
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.address-icon__phone {
+  height: 16px;
+  width: 10px;
+  margin-right: 10px;
+  fill: currentColor;
+}

@@ -1,0 +1,222 @@
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.backdrop-shadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #00000033;
+  z-index: 100;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: opacity, visibility;
+}
+
+.modal-window {
+  position: relative;
+  width: 528px;
+  margin: 10px;
+  padding-bottom: 40px;
+  background-color: white;
+  z-index: 120;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-button {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  right: 8px;
+  top: 8px;
+  fill: currentColor;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: color;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.modal-close-button__icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 6px;
+  bottom: 6px;
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
+}
+
+.modal-window__header {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 0;
+  display: inline-block;
+  font-family: $Roboto, sans-serif;
+}
+
+.modal-window__form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 12px;
+  margin-right: 40px;
+  height: 506px;
+}
+
+.modal-window__label {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  color: $color-gray;
+}
+
+.modal-window__label:hover svg,
+.modal-window__label:focus-within svg {
+  fill: $color-blue;
+}
+.modal-window__input {
+  margin-top: 4px;
+  height: 40px;
+  width: 448px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: border;
+  padding: 10px 42px;
+
+  &:hover,
+  &:focus-within {
+    border: 1px solid #2196f3;
+    outline: none;
+  }
+}
+
+.input-icon {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 32px;
+  left: 15px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: fill;
+}
+
+.modal-window_textarea {
+  width: 448px;
+  height: 120px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-left: 16px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: border;
+  margin-bottom: 20px;
+
+  &:hover,
+  &:focus-within {
+    border: 1px solid #2196f3;
+    outline: none;
+  }
+}
+
+.user-agreement {
+  position: relative;
+  padding-left: 7px;
+  margin-left: 11px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: $color-gray;
+  margin-bottom: 30px;
+  margin-left: 11px;
+}
+
+.agreement-checkbox {
+  visibility: hidden;
+}
+
+.checkbox-zone {
+  display: inline;
+}
+
+.agreement-checkbox:checked ~ p .checkbox-svg {
+  background: $color-blue;
+  border: 2px solid $color-blue;
+}
+
+.checkbox-svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 15px;
+  border: 2px solid $color-black;
+  border-radius: 2px;
+}
+
+.agreement-link {
+  color: $color-blue;
+  text-decoration: underline;
+}
+
+.modal-window__button {
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  font-family: $Roboto, sans-serif;
+  align-self: center;
+  border-radius: 4px;
+  color: $color-white;
+  background-color: $color-blue;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 187% */
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: background;
+  pointer-events: auto;
+
+  &:hover {
+    background: #188ce8;
+  }
+}
